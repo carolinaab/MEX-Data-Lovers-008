@@ -391,7 +391,7 @@ Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
 
 ## Checklist
 
-- [ ] Usa VanillaJS.
+- [ x ] Usa VanillaJS.
 - [ ] No hace uso de `this`.
 - [ ] Pasa linter (`npm pretest`)
 - [ ] Pasa tests (`npm test`)
