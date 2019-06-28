@@ -32,7 +32,7 @@ Nuestra encuesta fue contestada por un mayor número de mujeres
 
 Nuestro usuario tiene entre 26 - 30 años de edad
 
-![Frecuencia de juego](.arch_ext/pokemon_encuesta/frecuencia.jpg)
+![Frecuencia de juego](./arch_ext/pokemon_encuesta/frecuencia.jpg)
 
 Juega diariamente
 
@@ -40,7 +40,7 @@ Juega diariamente
 
 Lo que más le gusta de Pokémon GO es que puede armar una colección con los mejore pokemones
 
-![Datos importantes](.arch_ext/pokemon_encuesta/c_import.jpg)
+![Datos importantes](./arch_ext/pokemon_encuesta/c_import.jpg)
 
 Le da más importancia a datos como Tipo, Número de caramelos y Debilidades, que a datos como la Altura y Peso y información sobre Eclosión de huevos.
 
@@ -70,7 +70,7 @@ El usuario necesita una aplicación que le muestre un listado de sus pokemones p
 
 Después de hacer una análisis de aplicación Pokémon GO, llegamos a un acuerdo en que la aplicación web a desarrollar debía ser similar a la aplicación original, ya que el usuario ya esta familiarizado con esa interfaz y le permitira un mejor y más rápido manejo.
 
-![Prototipo de baja fidelaidad](.arch_ext/prototipo_b-04.png)
+![Prototipo de baja fidelaidad](./arch_ext/prototipo_b-04.png)
 
 ![Prototipo de baja fidelaidad 2](./arch_ext/prototipo_b2-03.png)
 
