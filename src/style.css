@@ -32,9 +32,7 @@ h2 {
   display: flex;
   align-items: center;
 }
-/* .container .logo {
-  text-align: center;
-} */
+
 header {
   padding: 20px;
   position: absolute;
@@ -67,7 +65,6 @@ header #icon-menu {
     rgba(220, 53, 51, 1),
     rgba(68, 1, 0, 1)
   );
-  /* height: 0; */
   overflow: hidden;
   clip-path: circle(0px at top left);
   transition: clip-path ease-in-out 700ms;
@@ -93,13 +90,11 @@ header #icon-menu {
 }
 
 .ham-menu {
-  /* padding: 1em; */
   top: 0.5em;
   right: 0.5em;
   display: flex;
   position: relative;
   z-index: 100;
-  /* transition: all ease-in-out 500ms; */
 }
 
 .menu-open .ham {
@@ -122,6 +117,49 @@ figure {
 #icon-menu-close {
   display: none;
 }
+/* ---- Carga ---- */
+#container-charge {
+  background-image: linear-gradient(
+    180deg,
+    rgba(220, 53, 51, 1),
+    rgba(68, 1, 0, 1)
+  );
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  z-index: 10000;
+}
+
+#charge {
+  width: 35%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  padding-top: 70%;
+  padding-right: 5%;
+
+  -webkit-animation: crecer 4s linear infinite;
+  -o-animation: crecer 4s linear infinite;
+  animation: crecer 4s linear infinite;
+}
+
+@keyframes crecer {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /* ---- Welcome ---- */
 #welcome {
   background-image: linear-gradient(
@@ -136,6 +174,7 @@ figure {
 .container-welcome {
   width: 80%;
   padding-top: 40%;
+  padding-right: 6%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -168,6 +207,9 @@ figure {
 
 /* ---- Sección BÚSQUEDA ---- */
 .search-section {
+  display: none;
+}
+#search {
   background-image: linear-gradient(
     180deg,
     rgba(220, 53, 51, 1),
@@ -196,6 +238,9 @@ figure {
 }
 
 /* ---- Sección MI COLECCIÓN ---- */
+/* .collection {
+  display: none;
+} */
 #collection-section {
   background-image: linear-gradient(
     180deg,
@@ -228,6 +273,10 @@ figure {
   color: aliceblue;
   float: left;
   display: block;
+}
+
+.show-collection {
+  height: 100vh;
 }
 
 /* ---- Trajeta de Pokémon ---- */

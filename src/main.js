@@ -1,4 +1,5 @@
-//---- Mostrar la data ----//
+//---- Mostrar la data ----/
+
 const showCard = document.getElementById("data");
 showCard.innerHTML = str;
 
