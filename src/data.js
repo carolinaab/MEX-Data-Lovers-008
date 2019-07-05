@@ -31,6 +31,11 @@ data.forEach(element => {
 });
 
 //---- Menú hamburguesa ----//
+
 const showMenu = () => {
   principalMenu.classList.toggle("site-nav-open");
 };
+
+// const closeMenu = () => {
+//   principalMenu.classList.toggle("site-nav-close");
+// };

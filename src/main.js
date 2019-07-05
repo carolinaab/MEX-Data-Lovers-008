@@ -6,6 +6,7 @@ showCard.innerHTML = str;
 
 const buttonMenu = document.getElementById("icon-menu");
 const principalMenu = document.getElementById("nav");
-const buttonMenuOpen = document.getElementById("icon-menu-close");
+// const buttonMenuClose = document.getElementById("icon-menu-close");
 
 buttonMenu.addEventListener("click", showMenu);
+// buttonMenuClose.addEventListener("click" , closeMenu);
