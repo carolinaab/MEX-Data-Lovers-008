@@ -14,6 +14,11 @@ body {
 img {
   max-width: 100%;
 }
+h1 {
+  color: rgba(255, 255, 255, 1);
+  font-size: 260%;
+  text-align: center;
+}
 
 h2 {
   font-size: 300%;
@@ -117,6 +122,49 @@ figure {
 #icon-menu-close {
   display: none;
 }
+/* ---- Welcome ---- */
+#welcome {
+  background-image: linear-gradient(
+    180deg,
+    rgba(220, 53, 51, 1),
+    rgba(68, 1, 0, 1)
+  );
+  height: 100vh;
+  text-align: center;
+}
+
+.container-welcome {
+  width: 80%;
+  padding-top: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#welcome p {
+  color: rgba(255, 255, 255, 1);
+  padding-top: 10%;
+}
+
+#welcome p strong {
+  font-size: 130%;
+}
+
+#welcome input {
+  background-image: linear-gradient(
+    120deg,
+    rgba(220, 53, 51, 1),
+    rgba(68, 1, 0, 1)
+  );
+  color: rgba(255, 255, 255, 1);
+  border-radius: 20px;
+  width: 40%;
+  height: 6vh;
+  font-family: "Asap", sans-serif;
+  font-weight: 500;
+  border-color: transparent;
+  margin-top: 10%;
+  font-size: 90%;
+}
 
 /* ---- Sección BÚSQUEDA ---- */
 .search-section {
@@ -154,20 +202,49 @@ figure {
     rgba(153, 169, 220, 1),
     rgba(255, 255, 255, 1)
   );
-  height: 100vh;
+  height: 2000vh;
 }
+
+.input-select {
+  width: 100%;
+  overflow: hidden;
+  align-items: center;
+  display: block;
+}
+
+.collection div form {
+  padding-left: 2em;
+  padding-top: 1em;
+  width: 50%;
+  height: 4vh;
+  margin-bottom: 3%;
+  display: block;
+}
+
+.order select {
+  width: 35%;
+  margin-bottom: 3%;
+  background-color: blue;
+  color: aliceblue;
+  float: left;
+  display: block;
+}
+
 /* ---- Trajeta de Pokémon ---- */
 #data {
+  /* background-color: aquamarine; */
   width: 90%;
+  margin: 20px;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
 }
 .poke-card {
+  /* background-color: blueviolet; */
   border-radius: 10px;
-  width: 198px;
-  height: 198px;
-  margin: 1rem;
+  width: 48%;
+  height: 48%;
+  margin: 0.5em 0.2em;
   float: left;
   text-align: center;
   padding: 20px;
