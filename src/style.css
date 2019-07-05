@@ -1,0 +1,158 @@
+<<<<<<< HEAD
+.prueba{
+    background: red
+}
+=======
+/* ---- Quitando estilos predetermindos ---- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* ---- Estilos generales ---- */
+body {
+  font-family: "Asap", sans-serif;
+  color: rgba(51, 51, 51, 1);
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ---- HEADER ---- */
+.container {
+  width: 100%;
+}
+header {
+  background-color: aquamarine;
+  position: fixed;
+  padding: 20px;
+  position: relative;
+}
+
+header::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.logo {
+  float: left;
+  margin: 0;
+}
+
+header #icon-menu {
+  cursor: pointer;
+}
+
+.navigation {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+    180deg,
+    rgba(220, 53, 51, 1),
+    rgba(68, 1, 0, 1)
+  );
+  height: 0;
+  overflow: hidden;
+}
+.site-nav-open {
+  height: 100vh;
+}
+.navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation .menu a {
+  display: block;
+  padding: 2em 6em;
+  font-size: 22px;
+  font-weight: 400;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+}
+
+.ham-menu {
+  padding: 1em;
+  top: 0.5em;
+  right: 0.5em;
+}
+
+.menu-open .ham {
+  transform: rotate(45deg);
+}
+
+.menu-open .ham::before {
+  opacity: 0;
+}
+
+.menu-open .ham::after {
+  transform: translateY(-3px) rotate(-90deg);
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+/* ---- Sección BÚSQUEDA ---- */
+#search-section {
+  background-image: linear-gradient(
+    180deg,
+    rgba(220, 53, 51, 1),
+    rgba(255, 255, 255, 1)
+  );
+  height: 100vh;
+}
+#title-input {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 24% 10%;
+  text-align: center;
+}
+/* ---- Sección MI COLECCIÓN ---- */
+#collection-section {
+  background-image: linear-gradient(
+    180deg,
+    rgba(153, 169, 220, 1),
+    rgba(255, 255, 255, 1)
+  );
+  height: 100vh;
+}
+/* ---- Trajeta de Pokémon ---- */
+#data {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.poke-card {
+  border-radius: 10px;
+  width: 198px;
+  height: 198px;
+  margin: 1rem;
+  float: left;
+  text-align: center;
+  padding: 10px;
+}
+
+div:hover .poke-card {
+  transform: scale(1.5);
+}
+#p-number {
+  font-weight: 400;
+}
+#p-name {
+  font-weight: 700;
+}
+#p-type {
+  font-weight: 500;
+}
+>>>>>>> upstream/master
