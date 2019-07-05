@@ -22,8 +22,11 @@
       </div>
       <nav class="navigation" id="nav">
         <ul class="menu">
+            <li>
+                <a class="link" href="#welcome">HOME</a>
+              </li>
           <li>
-            <a class="link" href="#search-section">BÚSQUEDA</a>
+            <a class="link" href="#search">BÚSQUEDA</a>
           </li>
           <li>
             <a class="link" href="#collection-section">MI COLECCIÓN</a>
@@ -45,7 +48,16 @@
     </header>
 
     <main id="cont">
-      <section class="search-section">
+      <section id="welcome">
+        <div class="container-welcome">
+        <h1>BIENVENIDOS</h1>
+        <p>Esta aplicación te ayudará a llevar un registro de los pokemones que has capturado, los que te faltan por capturar y además podrás conocer sus principales características para que ganes el mayor número de combates y sepas el momento correcto para evolucionar a tus pokemones.<br>
+            <strong>¡Atrápalos ya!</strong></p>
+            <input type="button" value="COMENZAR"
+            id="button-start">
+          </div>
+</section>
+      <section class="search-section" id="search">
         <div class="title-input">
           <span class="title"><h2>BÚSQUEDA</h2></span>
           <div class="inp-search">
@@ -63,18 +75,29 @@
         </div>
       </section>
 
-      <section id="collection-section">
-        <form>
-          <div>
+      <section id="collection-section" class="collection">
+        <div class="input-select">
+        <div class="inp-search">
+          <form>
             <input
               type="search"
-              id="search-collection"
-              name="q-c"
+              id="my-search"
+              name="q"
               placeholder="Busca un pokémon"
             />
-            <button>buscar</button>
-          </div>
+            <img src="./arch_ext/lupa-04.png" alt="x" width="10%" />
+            <button id="but-search"></button>
+          </form>
         </form>
+        <div class="order">
+          <select>
+          <option value="a-z">Nombre de la A-Z</option>
+          <option value="z-a">Nombre de la Z-A</option>
+          <option value="n-ascending">Número ascendente</option>
+          <option value="n-descending">Número descendente</option>
+        </select>
+      </div>
+    </div>
         <div>
           <h2>MI COLECCIÓN</h2>
           <div id="data"></div>
