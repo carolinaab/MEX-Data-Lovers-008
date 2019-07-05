@@ -23,13 +23,13 @@
       <nav class="navigation" id="nav">
         <ul class="menu">
             <li>
-                <a class="link" href="#welcome">HOME</a>
+                <a id= "home-m" class="link" href="#welcome">HOME</a>
               </li>
           <li>
-            <a class="link" href="#search">BÚSQUEDA</a>
+            <a id= "search-m" class="link" href="#search">BÚSQUEDA</a>
           </li>
           <li>
-            <a class="link" href="#collection-section">MI COLECCIÓN</a>
+            <a id= "collection-m" class="link" href="#collection-section">MI COLECCIÓN</a>
           </li>
           <li>
             <a class="link" href="#missing-section">FALTANTES</a>
@@ -47,8 +47,18 @@
       </figure>
     </header>
 
+    <div id="container-charge">
+        <div id="charge">
+          <figure> <img
+            src="./arch_ext/logo_catchm.png"
+            alt="Logo CatchMaster"
+          /></figure>
+      
+          </div>
+    </div>
+
     <main id="cont">
-      <section id="welcome">
+      <section id="welcome" class="welcome-s">
         <div class="container-welcome">
         <h1>BIENVENIDOS</h1>
         <p>Esta aplicación te ayudará a llevar un registro de los pokemones que has capturado, los que te faltan por capturar y además podrás conocer sus principales características para que ganes el mayor número de combates y sepas el momento correcto para evolucionar a tus pokemones.<br>
@@ -89,14 +99,6 @@
             <button id="but-search"></button>
           </form>
         </form>
-        <div class="order">
-          <select>
-          <option value="a-z">Nombre de la A-Z</option>
-          <option value="z-a">Nombre de la Z-A</option>
-          <option value="n-ascending">Número ascendente</option>
-          <option value="n-descending">Número descendente</option>
-        </select>
-      </div>
     </div>
         <div>
           <h2>MI COLECCIÓN</h2>
