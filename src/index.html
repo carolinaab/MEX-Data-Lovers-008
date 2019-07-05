@@ -2,25 +2,93 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <title>Data Lovers</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+  <title>Pokémon CatchMaster</title>
+  <link href="https://fonts.googleapis.com/css?family=Asap:400,500,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
-
 <body>
+  <header class="header">
+    <div class="container">
+      <figure class="logo">
+        <a href="#">
+          <img src="./arch_ext/logo_catchm.png" width="30%" alt="Logo CatchMaster" />
+        </a>
+      </figure>
+      <div class="ham-menu">
+        <span id="icon-menu"><img src="./arch_ext/icono_menu-01.png" alt="" width="5%" /></span>
+        <span id="icon-menu-close"><img src="./arch_ext/icono_menu-02.png" alt="" width="5%" /></span>
+      </div>
+      <nav class="navigation" id="nav">
+        <ul class="menu">
+          <li>
+            <a class="link" href="#search-section">BÚSQUEDA</a>
+          </li>
+          <li>
+            <a class="link" href="#collection-section">MI COLECCIÓN</a>
+          </li>
+          <li>
+            <a class="link" href="#missing-section">FALTANTES</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  </select>
+  <main id="cont">
+    <!-- ordenados -->
+    <div class="select-btn">
+      <div class="col-xs-3 btn-s">
+        <select name="" id="ordenar">
+          <option disabled selected=>Ordenar por:</option>
+          <option value="az"> A - Z </option>
+          <option value="za">Z - A</option>
+        </select>
+        <div id="lista-ordenada">
 
-    
-    <section id="tipos">
+        </div>
+        <!-- filtrados -->
+      </div>
+      <div class="col-xs-3 btn-s">
+        <select name="" id="filter">
+          <option selected disabled>Filtrar por:</option>
+          <option value="1">Tipo</option>
 
+        </select>
+      </div>
+      <!-- filtrardo especifico -->
+      <div class="col-xs-3 btn-s" id="specificFilter"></div>
+      <!-- de busqueda -->
+      <div class="col-xs-3 btn-s"></div>
+    </div>
     </section>
-  
+    <section id="search-section">
+      <div id="title-input">
+        <h2>BÚSQUEDA</h2>
+        <form>
+          <div>
+            <input type="search" id="my-search" name="q" placeholder="Busca un pokémon" />
+            <button>buscar</button>
+          </div>
+        </form>
+      </div>
+    </section>
 
-  <section id="data">
-
-  </section>
-
-  <div id="root"></div>
+    <section id="collection-section">
+      <form>
+        <div>
+          <input type="search" id="search-collection" name="q-c" placeholder="Busca un pokémon" />
+          <button>buscar</button>
+        </div>
+      </form>
+      <div>
+        <h2>MI COLECCIÓN</h2>
+        <div id="data"></div>
+      </div>
+    </section>
+  </main>
   <!-- <script src="./data/injuries/injuries.js"></script> -->
   <script src="./data/pokemon/pokemon.js"></script>
   <!-- <script src="./data/steam/steam.js"></script> -->

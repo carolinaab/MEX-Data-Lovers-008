@@ -9,83 +9,93 @@
 
 // for (pokemones in POKEMON.pokemon) {
 //   console.log(POKEMON.pokemon[pokemones].name)
-// }
 
-// }
+
+//
 const data = POKEMON.pokemon
-// console.log(data);
-
-
-
-
-
-let str = ''
+// LISTA POKEMON
+let str = "";
 data.forEach(element => {
-  const pokeName = element.name
-  const pokeType = element.type
-  const pokeImg = element.img
+  const pokeNumber = element.num;
+  const pokeName = element.name;
+  const pokeType = element.type;
+  const pokeImg = element.img;
 
-  str += `<div class="prueba">
-    <h3>${pokeName}</h3>
-    <p>${pokeType}</p>
-    <img src="${pokeImg}" alt="">
-  </div>`
-
+  str += `<div class="poke-card">
+  <p id="p-number">${pokeNumber}</p>
+  <h3 id="p-name">${pokeName}</h3>
+  <p id="p-type">${pokeType}</p>
+  <img
+    src="${pokeImg}"
+    alt="Imagen del pokémon"
+    id="p-img"
+  />
+</div>`;
 });
 
-let strTypes = '';
 
-data.forEach(element => {
+//---- Menú hamburguesa ----//
+const showMenu = () => {
+  principalMenu.classList.toggle("site-nav-open");
+};
+// ordenar pokemones
+const ordenData = (data, propiedad, orden) => {
+  let ordenada;
+  if (orden === "ascendente") {
+    ordenada = data.sort((a, b) => (a[propiedad] > b[propiedad] ? 1 : -1))
+  } else if (orden === "descendente") {
+    ordenada = data.sort((a, b) => (a[propiedad] > b[propiedad] ? -1 : 1))
+  } else if (orden === "numAscendente") {
+    ordenada = data.sort((a, b) => (a[propiedad] > b[propiedad] ? -1 : 1))
+  } else if (orden === "numDescendente") {
+    ordenada = data.sort((a, b) => (a[propiedad] > b[propiedad] ? -1 : 1))
+    return ordenada;
+  }
 
-  const pokeType = element.type
+}
 
 
-  str += `<div class="prueba2">
-   <p>${pokeType}</p>
-   </div>`
 
-  // let sinRepetir = [...new Set(pokeType)];
-  // return sinRepetir
 
-});
+
+
+
 // console.log(strTypes);
 
 
 
-// let filterPoke = (paramFilter) => {
 
 
-let arrFilter = [];
-data.forEach(element => {
-  const typeFilter = element.type
-  for (i = 0; i <= typeFilter.length; i++) {
-    if (element.type.includes(typeFilter)) {
-      arrFilter.push(element)
+// filtrar pokemones 
+
+
+
+let filterPoke = data.filter(element => {
+  for (let i = 0; i < element.type.length; i++) {
+    if (element["type"][i] === "Grass") {
+      return true;
     }
-    return arrFilter
   }
-});
-console.log(arrFilter)
-
-
-
-
-
-
-const boulbasor = data.find(element => {
-  return element.name === "Bulbasaur"
 })
-console.log(boulbasor)
-let pokemonTypes;
-const pokemonFilter = data.filter(element => {
-  if (element.type === "str") {
 
-  }
+//  como traer solo los array?
+
+const typelist = (data) => {
+  const arrType = [];
+  let tipos = [];
+  data.forEach(element => {
+    for (let i = 0; i < element.type.length; i++) {
+      arrType.push(element.type[i]);
+    }
+    tipos = [...new Set(arrtype)];
+  });
+  return tipos;
+};
 
 
 
-})
-console.log(pokemonFilter)
+
+
 
 
 
