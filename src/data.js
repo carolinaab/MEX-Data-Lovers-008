@@ -12,99 +12,57 @@
 
 
 //
-const data = POKEMON.pokemon
+const data = POKEMON.pokemon;
+
+
 // LISTA POKEMON
-let str = "";
-data.forEach(element => {
-  const pokeNumber = element.num;
-  const pokeName = element.name;
-  const pokeType = element.type;
-  const pokeImg = element.img;
+const showCard = document.getElementById("data");
 
-  str += `<div class="poke-card">
-  <p id="p-number">${pokeNumber}</p>
-  <h3 id="p-name">${pokeName}</h3>
-  <p id="p-type">${pokeType}</p>
-  <img
-    src="${pokeImg}"
-    alt="Imagen del pokémon"
-    id="p-img"
-  />
-</div>`;
-});
-
+const manipularData = (data) => {
+    let str = ""; //se crea variable que recibira la data 
+    data.forEach(element => { //recorrer la data similar al for 
+        str += `<div class="poke-card"> 
+       <img src="${element.img}"
+  alt="Imagen del pokémon"
+    id="p-img"</img>
+  <p id="p-number">${element.num}</p>
+  <h3 id="p-name">${element.name}</h3>
+  <p id="p-type">${element.type}</p>
+  
+  
+</div>`
+    });
+    showCard.innerHTML = str
+}
+manipularData(data)
 
 //---- Menú hamburguesa ----//
 const showMenu = () => {
-  principalMenu.classList.toggle("site-nav-open");
+    principalMenu.classList.toggle("site-nav-open");
 };
 // ordenar pokemones
-const ordenData = (data, propiedad, orden) => {
-  let ordenada;
-  if (orden === "ascendente") {
-    ordenada = data.sort((a, b) => (a[propiedad] > b[propiedad] ? 1 : -1))
-  } else if (orden === "descendente") {
-    ordenada = data.sort((a, b) => (a[propiedad] > b[propiedad] ? -1 : 1))
-  } else if (orden === "numAscendente") {
-    ordenada = data.sort((a, b) => (a[propiedad] > b[propiedad] ? -1 : 1))
-  } else if (orden === "numDescendente") {
-    ordenada = data.sort((a, b) => (a[propiedad] > b[propiedad] ? -1 : 1))
-    return ordenada;
-  }
+// const sortData = (data, sortBy, sortOrden) => {
+//     let listaOrdenada;
+//     switch (sortOrden) {
+//         case 'ascendente':
+//             if (sortBy === 'avf_spawns') {
+//                 listaOrdenada = data.sort((eleA, eleB) => eleA.avg_spawns - eleB.avg_spawns);
+//             } else {
+//                 listaOrdenada = data.sort((eleA, eleB) => eleA.name > eleB.name ? 1 : -1);
+//             }
+//             break;
+//         case 'descendente':
+//             listaOrdenada = data.sort((eleA, eleB) => eleB.name > eleA.name ? 1 : -1);
+//             break;
+//     }
+//     return listaOrdenada
+// };
 
-}
+// BUSQUEDA DE POKEMONES 
+const mySearch = document.getElementById("my-search");
+const botonBuscar = document.getElementById("buscar");
 
-
-
-
-
-
-
-// console.log(strTypes);
-
-
-
-
-
-// filtrar pokemones 
-
-
-
-let filterPoke = data.filter(element => {
-  for (let i = 0; i < element.type.length; i++) {
-    if (element["type"][i] === "Grass") {
-      return true;
-    }
-  }
-})
-
-//  como traer solo los array?
-
-const typelist = (data) => {
-  const arrType = [];
-  let tipos = [];
-  data.forEach(element => {
-    for (let i = 0; i < element.type.length; i++) {
-      arrType.push(element.type[i]);
-    }
-    tipos = [...new Set(arrtype)];
-  });
-  return tipos;
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+botonBuscar.addEventListener('click', () => {
+const result = data.filter(pokemon => pokemon.name.toLocaleLowerCase() == mySearch)
+manipularData(result)
+});

@@ -1,35 +1,41 @@
+
 //---- Mostrar la data ----//
-const showCard = document.getElementById("data");
-showCard.innerHTML = str;
+
 
 //---Menú Hamburquesa---//
 
 const buttonMenu = document.getElementById("icon-menu");
 const principalMenu = document.getElementById("nav");
 const buttonMenuOpen = document.getElementById("icon-menu-close");
-
+const theme = document.getElementById("theme-title")
 buttonMenu.addEventListener("click", showMenu);
 
 
 
 
 // ordenar pokemones 
-// const listaOrdenada = document.getElementById("lista-ordenada");
-// const ordenPokemon = document.getElementById("ordenar").value
-// ordenPokemon.addEventListener("change", () => {
-//     let sort;
-//     switch (ordenPokemon) {
-
-//         case "a-z":
-//             sort = "ascendente";
+// const ordenar = document.getElementById("ordenar")
+// const orderPokemon = document.getElementById("lista-ordenada");
+// const listaPokemon = document.getElementById("list-pokemon")
+// ordenar.addEventListener('change', () => {
+//     const selectOrder = orderPokemon.value;
+//     let sortOrder;
+//     switch (selectOrder) {
+//         case 'avg_spawns':
+//             sortOrder = 'ascendente';
 //             break;
-//         case "z-a":
-//             sort = "descendente";
+//         case 'az':
+//             sortOrder = 'ascendente';
+//             break;
+//         case 'za':
+//             sortOrder = 'descendente';
 //             break;
 //     }
+// return sortOrder;
+// });
 
-//     const pokeOrdenado = pokemon.ordenData(listaPoke, listaOrdenada, sort)
-//     listaOrdenada.innerHTML = listaPoke(pokeOrdenado)
+// const pokedexOrdenado = pokemon.sortData(data, selectOrder, sortOrder);
+;
+// listaPokemon.innerHTML = sortOrder;
 
 
-// })
