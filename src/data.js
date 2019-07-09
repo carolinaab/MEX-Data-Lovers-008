@@ -7,29 +7,6 @@
 
 // window.example = example;
 
-//---- Mostrar la data ----//
-
-const data = POKEMON.pokemon;
-
-let str = "";
-data.forEach(element => {
-  const pokeNumber = element.num;
-  const pokeName = element.name;
-  const pokeType = element.type;
-  const pokeImg = element.img;
-
-  str += `<div class="poke-card">
-  <p id="p-number">${pokeNumber}</p>
-  <h3 id="p-name">${pokeName}</h3>
-  <p id="p-type">${pokeType}</p>
-  <img
-    src="${pokeImg}"
-    alt="Imagen del pokémon"
-    id="p-img"
-  />
-</div>`;
-});
-
 //---- Menú hamburguesa ----//
 
 const showMenu = () => {
@@ -47,7 +24,6 @@ const containerPreload = document.getElementById("container-charge");
 const preloadCharge = () => {
   containerPreload.style.display = "none";
 };
-
 window.onload = preloadCharge;
 
 //---- Aparecer y desaparecer secciones ----//
@@ -71,3 +47,19 @@ const showCollection = () => {
 startButton.addEventListener("click", showSearch);
 
 menuWelcome.addEventListener("click", showCollection);
+
+//---- Filtrar data ----//
+// filterData = (data) {
+//     const pokeName = element.name;
+//     const pokeType = element.type
+//   }
+// };
+
+// filter(element => {
+//   return element.name;
+// });
+
+// console.log((resultsSearch = filterTypeName.value));
+// innerHTML = filterTypeName.value;
+
+// window.filterData = nameType;
