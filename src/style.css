@@ -170,18 +170,20 @@ div:hover .poke-card {
 
   position: fixed;
   background-color: rgba(241, 141, 141, 0.5);  
-  width: 1020px;
+  width: 100%px;
   height: 100px;
   bottom: 200px;
   left: 0;
   right: 0;
+
   
   }
 
 #ordenar{
   font-family: cursive;
-  border: 3px solid  rgba(220, 53, 51, 1);
+  border-radius: 3px solid;
   font-size: 15px;
+
 
 }
 #filter{
