@@ -3,10 +3,10 @@ require('../src/data.js');
 
 describe('filterData', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof sortData).toBe('function');
   });
 
-  it('deberia retornar un arreglo de objetos `example`', () => {
-    expect(filterData() instanceof).toBe('array');
+  it('deberia retornar un arreglo, () => {
+    expect(sortData() instanceof Array).toBe(true);
   });
-});
+
