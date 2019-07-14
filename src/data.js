@@ -1,35 +1,21 @@
+// esta es una función de ejemplo
+// puedes ver como agregamos la función a nuestro objeto global window
 
+// const example = () => {
+//   return 'example';
+// };
 
+// window.example = example;
 
 //---- Menú hamburguesa ----//
 
 const showMenu = () => {
   principalMenu.classList.toggle("site-nav-open");
 };
-// BUSQUEDA DE POKEMONES 
-const mySearch = document.getElementById("my-search");
-const botonBuscar = document.getElementById("buscar");
 
-botonBuscar.addEventListener('click', () => {
-  const result = data.filter(pokemon => pokemon.name.toLocaleLowerCase() == mySearch)
-  manipularData(result)
-});
-
-const sortData = () => {
-
-}
-
-
-
-
-
-ordenarPor.addEventListener("change", () => {
-  let sortBy = ordenarPor.value;
-  let order = window.pokemons.sortData();
-  showCard.innerHTML = order;
- 
-})
-
+// const closeMenu = () => {
+//   principalMenu.classList.toggle("site-nav-close");
+// };
 
 //---- Imágen Preload ----//
 
@@ -62,13 +48,18 @@ startButton.addEventListener("click", showSearch);
 
 menuWelcome.addEventListener("click", showCollection);
 
+//---- Filtrar data ----//
+// filterData = (data) {
+//     const pokeName = element.name;
+//     const pokeType = element.type
+//   }
+// };
 
+// filter(element => {
+//   return element.name;
+// });
 
+// console.log((resultsSearch = filterTypeName.value));
+// innerHTML = filterTypeName.value;
 
-
-
-
-window.data = {
-
-  showMenu,
-};
+// window.filterData = nameType;
