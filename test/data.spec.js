@@ -1,12 +1,12 @@
 require('../src/data.js');
 
 
-describe('example', () => {
+describe('filterData', () => {
   it('is a function', () => {
     expect(typeof example).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it('deberia retornar un arreglo de objetos `example`', () => {
+    expect(filterData() instanceof).toBe('array');
   });
 });

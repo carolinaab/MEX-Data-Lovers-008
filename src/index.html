@@ -38,9 +38,9 @@
   </header>
   </select>
   <main id="cont">
-    <!-- ordenados -->
-    
     </section>
+    <!-- busqueda -->
+
     <section id="search-section">
       <div id="title-input">
         <h2>BÚSQUEDA</h2>
@@ -52,46 +52,136 @@
         </form>
       </div>
     </section>
-    
-      
-        <select name="" id="ordenar">
-          <option disabled selected=>Ordenar por:</option>
-          <option value="az"> A - Z </option>
-          <option value="za">Z - A</option>
-        </select>
-     
 
-        
-        <!-- filtrados -->
-      
-      
-        <select name="" id="filter">
-          <option selected disabled>Filtrar por:</option>
-          <option value="Grass">Grass</option>
-          <option value="Poison">Poison</option>
-          <option value="Fire">Fire</option>
-          <option value="Flying">Flying</option>
-          <option value="Water">Water</option>
-          <option value="Bug">Bug</option>
-          <option value="Normal">Normal</option>
-          <option value="Ground">Ground</option>
-          <option value="Rock">Rock</option>
-          <option value="Ice">Ice</option>
-          <option value="Electric">Electric</option>
-          <option value="Dragon">Dragon</option>
-          <option value="Ghost">Ghost</option>
-          <option value="Psychic">Psychic</option>
-          <option value="Fighting">Fighting</option>
-        </select>
-     
-     
+
+
 
     <section id="collection-section">
       <form>
-        <div>
-          <input type="search" id="search-collection" name="q-c" placeholder="Busca un pokémon" />
-          <button>buscar</button>
-        </div>
+
+        <head>
+          <meta charset="utf-8" />
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          <title>Pokémon CatchMaster</title>
+          <link href="https://fonts.googleapis.com/css?family=Asap:400,500,700&display=swap" rel="stylesheet" />
+          <link rel="stylesheet" href="style.css" />
+        </head>
+
+        <body>
+          <header class="header container">
+            <div id="menu-ham" class="ham-menu">
+              <span id="icon-menu"><img src="./arch_ext/icono_menu-01.png" alt="" width="40%" /></span>
+              <span id="icon-menu-close"><img src="./arch_ext/icono_menu-02.png" alt="" width="40%" /></span>
+            </div>
+            <nav class="navigation" id="nav">
+              <ul class="menu">
+                <li>
+                  <a id="home-m" class="link" href="#welcome">HOME</a>
+                </li>
+                <li>
+                  <a id="search-m" class="link" href="#search">BÚSQUEDA</a>
+                </li>
+                <li>
+                  <a id="collection-m" class="link" href="#collection-section">MI COLECCIÓN</a>
+                </li>
+                <li>
+                  <a class="link" href="#missing-section">FALTANTES</a>
+                </li>
+              </ul>
+            </nav>
+            <figure class="logo">
+              <a href="#">
+                <img src="./arch_ext/logo_catchm.png" width="60%" alt="Logo CatchMaster" />
+              </a>
+            </figure>
+          </header>
+
+          <div id="container-charge">
+            <div id="charge">
+              <figure> <img src="./arch_ext/logo_catchm.png" alt="Logo CatchMaster" /></figure>
+
+            </div>
+          </div>
+
+          <main id="cont">
+        
+                   <section>
+                <select name="" id="ordenar-por" class="orden-pokemon">
+                    <option disabled selected=>Ordenar por:</option>
+                    <option value="az"> A - Z </option>
+                    <option value="za">Z - A</option>
+                  </select>
+              
+              
+              
+                  <!-- filtrados -->
+              
+              
+                  <select name="" id="filter">
+                    <option selected disabled>Filtrar por:</option>
+                    <option value="Grass">Grass</option>
+                    <option value="Poison">Poison</option>
+                    <option value="Fire">Fire</option>
+                    <option value="Flying">Flying</option>
+                    <option value="Water">Water</option>
+                    <option value="Bug">Bug</option>
+                    <option value="Normal">Normal</option>
+                    <option value="Ground">Ground</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Ice">Ice</option>
+                    <option value="Electric">Electric</option>
+                    <option value="Dragon">Dragon</option>
+                    <option value="Ghost">Ghost</option>
+                    <option value="Psychic">Psychic</option>
+                    <option value="Fighting">Fighting</option>
+                  </select>
+                </section>
+
+                  <section id="welcome" class="welcome-s">
+              <div class="container-welcome">
+                <h1>BIENVENIDOS</h1>
+                <p>Esta aplicación te ayudará a llevar un registro de los pokemones que has capturado, los que te faltan
+                  por capturar y además podrás conocer sus principales características para que ganes el mayor número de
+                  combates y sepas el momento correcto para evolucionar a tus pokemones.<br>
+                  <strong>¡Atrápalos ya!</strong></p>
+                <input type="button" value="COMENZAR" id="button-start">
+              </div>
+            </section>
+
+            
+ 
+            <section class="search-section" id="search">
+               
+
+              <div class="title-input">
+                <span class="title">
+                  <h2>BÚSQUEDA</h2>
+                </span>
+                <div class="inp-search">
+                  <form>
+                    <input type="search" id="my-search1" name="q" placeholder="Busca un pokémon" />
+                    <img src="./arch_ext/lupa-03.png" alt="x" width="5%" />
+                    <button id="but-search"></button>
+                  </form>
+                  <div id="search-results"></div>
+                </div>
+              </div>
+            </section>
+
+            <section id="collection-section" class="collection">
+              <div class="input-select">
+                <div class="inp-search">
+                  <form>
+                    <input type="search" id="my-search" name="q" placeholder="Busca un pokémon" />
+                    <img src="./arch_ext/lupa-04.png" alt="x" width="10%" />
+                    <button id="but-search"></button>
+                  </form>
+      </form>
+      </div>
+      <div>
+        <input type="search" id="search-collection" name="q-c" placeholder="Busca un pokémon" />
+        <button>buscar</button>
+      </div>
       </form>
       <div>
         <h2>MI COLECCIÓN</h2>
@@ -107,5 +197,6 @@
   <script src="data.js"></script>
   <script src="main.js"></script>
 </body>
+
 
 </html>

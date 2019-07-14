@@ -8,22 +8,33 @@
 body {
   font-family: "Asap", sans-serif;
   color: rgba(51, 51, 51, 1);
-  margin: 0;
 }
 
 img {
   max-width: 100%;
 }
+h1 {
+  color: rgba(255, 255, 255, 1);
+  font-size: 260%;
+  text-align: center;
+}
+
+h2 {
+  font-size: 300%;
+  text-align: center;
+}
 
 /* ---- HEADER ---- */
 .container {
   width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
 }
+
 header {
-  background-color: aquamarine;
-  position: fixed;
   padding: 20px;
-  position: relative;
+  position: absolute;
 }
 
 header::after {
@@ -34,7 +45,8 @@ header::after {
 
 .logo {
   float: left;
-  margin: 0;
+  display: flex;
+  padding-top: 2em;
 }
 
 header #icon-menu {
@@ -52,11 +64,14 @@ header #icon-menu {
     rgba(220, 53, 51, 1),
     rgba(68, 1, 0, 1)
   );
-  height: 0;
   overflow: hidden;
+  clip-path: circle(0px at top left);
+  transition: clip-path ease-in-out 700ms;
+  margin-top: -65px;
 }
 .site-nav-open {
   height: 100vh;
+  clip-path: circle(150% at top left);
 }
 .navigation ul {
   margin: 0;
@@ -74,9 +89,11 @@ header #icon-menu {
 }
 
 .ham-menu {
-  padding: 1em;
   top: 0.5em;
   right: 0.5em;
+  display: flex;
+  position: relative;
+  z-index: 100;
 }
 
 .menu-open .ham {
@@ -96,8 +113,102 @@ figure {
   padding: 0;
 }
 
+#icon-menu-close {
+  display: none;
+}
+/* ---- Carga ---- */
+#container-charge {
+  background-image: linear-gradient(
+    180deg,
+    rgba(220, 53, 51, 1),
+    rgba(68, 1, 0, 1)
+  );
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  z-index: 10000;
+}
+
+#charge {
+  width: 35%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  padding-top: 70%;
+  padding-right: 5%;
+
+  -webkit-animation: crecer 4s linear infinite;
+  -o-animation: crecer 4s linear infinite;
+  animation: crecer 4s linear infinite;
+}
+
+@keyframes crecer {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* ---- Welcome ---- */
+#welcome {
+  background-image: linear-gradient(
+    180deg,
+    rgba(220, 53, 51, 1),
+    rgba(68, 1, 0, 1)
+  );
+  height: 100vh;
+  text-align: center;
+}
+
+.container-welcome {
+  width: 80%;
+  padding-top: 40%;
+  padding-right: 6%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#welcome p {
+  color: rgba(255, 255, 255, 1);
+  padding-top: 10%;
+}
+
+#welcome p strong {
+  font-size: 130%;
+}
+
+#welcome input {
+  background-image: linear-gradient(
+    120deg,
+    rgba(220, 53, 51, 1),
+    rgba(68, 1, 0, 1)
+  );
+  color: rgba(255, 255, 255, 1);
+  border-radius: 20px;
+  width: 40%;
+  height: 6vh;
+  font-family: "Asap", sans-serif;
+  font-weight: 500;
+  border-color: transparent;
+  margin-top: 10%;
+  font-size: 90%;
+}
+
 /* ---- Sección BÚSQUEDA ---- */
-#search-section {
+.search-section {
+  display: none;
+}
+#search {
   background-image: linear-gradient(
     180deg,
     rgba(220, 53, 51, 1),
@@ -105,14 +216,30 @@ figure {
   );
   height: 100vh;
 }
-#title-input {
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 24% 10%;
+
+.title-input {
+  width: 100%;
+  padding: 46% 10%;
   text-align: center;
+  top: 50%;
+  left: 50%;
 }
+
+.input-search {
+  width: 100%;
+  align-items: center;
+}
+
+#but-search {
+  width: auto;
+  overflow: visible;
+  cursor: pointer;
+}
+
 /* ---- Sección MI COLECCIÓN ---- */
+/* .collection {
+  display: none;
+} */
 #collection-section {
   background-image: linear-gradient(
     180deg,
@@ -120,27 +247,115 @@ figure {
     rgba(255, 255, 255, 1)
   );
   height: 200vh;
+  height: 2000vh;
 }
+
+.input-select {
+  width: 100%;
+  overflow: hidden;
+  align-items: center;
+  display: block;
+}
+
+.collection div form {
+  padding-left: 2em;
+  padding-top: 1em;
+  width: 50%;
+  height: 4vh;
+  margin-bottom: 3%;
+  display: block;
+}
+
+.order select {
+  width: 35%;
+  margin-bottom: 3%;
+  background-color: blue;
+  color: aliceblue;
+  float: left;
+  display: block;
+}
+
+.show-collection {
+  height: 100vh;
+}
+
 /* ---- Trajeta de Pokémon ---- */
 #data {
+  /* background-color: aquamarine; */
   width: 90%;
+  margin: 20px;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
 }
-.poke-card {
-  border-radius: 10px;
-  width: 198px;
-  height: 198px;
-  margin: 1rem;
+/* .poke-card {
+  /* background-color: blueviolet; */
+/* border-radius: 10px;
+  width: 48%;
+  height: 48%;
+  margin: 0.5em 0.2em;
   float: left;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
+} */
+
+/* .poke-card:hover {
+  transform: scale(1.3);
+} */
+
+.poke-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
 }
 
-div:hover .poke-card {
-  transform: scale(1.5);
+.poke-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
+
+.poke-card:hover .poke-card-inner {
+  transform: rotateY(180deg);
+}
+
+.poke-card-front,
+.poke-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.poke-card-front {
+  background-color: transparent;
+  color: rgba(51, 51, 51, 1);
+}
+
+.poke-card-back {
+  background-color: transparent;
+  color: rgba(51, 51, 51, 1);
+  transform: rotateY(180deg);
+}
+
+.can-weak,
+.heig-weig {
+  text-align: center;
+  overflow: hidden;
+}
+
+#p-candy,
+#p-weaknesses,
+#p-height,
+#p-weight {
+  float: left;
+}
+
 #p-number {
   font-weight: 400;
 }
@@ -151,46 +366,8 @@ div:hover .poke-card {
   font-weight: 500;
 }
 
-.select-btn {
-  background:  rgba(153, 169, 220, 1);
-  width: 100%;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 5rem;
-  padding-top: 0px;
-  padding-right: 5rem;
-  padding-bottom: 0px;
-  padding-left: 5rem;
- 
+.ordenar-por {
 
-}
-#btn-select{
-
-  position: fixed;
-  background-color: rgba(241, 141, 141, 0.5);  
-  width: 100%px;
-  height: 100px;
-  bottom: 200px;
-  left: 0;
-  right: 0;
-
-  
-  }
-
-#ordenar{
-  font-family: cursive;
-  border-radius: 3px solid;
-  font-size: 15px;
-
-
-}
-#filter{
-  font-family: cursive;
-  border: 3px  solid  rgba(153, 169, 220, 1);
-  font-size: 15px;
-  
 }
 
 
