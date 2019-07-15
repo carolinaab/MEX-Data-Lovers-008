@@ -74,12 +74,12 @@ const sortData = data.sort((a, b) => {
 
 pickSort.addEventListener("change", () => {
   // let valueSort = pickSort.value;  // sacar el valor de la constante con la que fue llamada el elem id
-  let newArrayAZ = sortData; // crear un nuevo arr para guardar el valor y buscar pokemon en el elemento
-  manipulateData(newArrayAZ); // nos ayuda a manipular toda la data
+  let newArrayZA = sortData; // crear un nuevo arr para guardar el valor y buscar pokemon en el elemento
+  manipulateData(newArrayZA); // nos ayuda a manipular toda la data
 });
 pickSort.addEventListener("change", () => {
-  let newArrayZA = sortData.reverse(pokemon => pokemon.name == valueSort); // se usa .reverse para ordenar de z-a
-  manipulateData(newArrayZA);
+  let newArrayAZ = sortData.reverse(pokemon => pokemon.name == valueSort); // se usa .reverse para ordenar de z-a
+  manipulateData(newArrayAZ);
 });
 // const newArraySort = {};
 // if (valueSort === "az") {
