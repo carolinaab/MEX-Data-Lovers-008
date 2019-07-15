@@ -27,7 +27,7 @@ const preloadCharge = () => {
 window.onload = preloadCharge;
 
 //---- Aparecer y desaparecer secciones ----//
-const searchSection = document.getElementById("search");
+// const searchSection = document.getElementById("search");
 const welcomeSection = document.getElementById("welcome");
 const startButton = document.getElementById("button-start");
 const collectionSection = document.getElementById("collection-section");
@@ -37,7 +37,7 @@ const menuCollection = document.getElementById("collection-m");
 
 const showSearch = () => {
   welcomeSection.classList.add("search-section");
-  searchSection.classList.remove("search-section");
+  collectionSection.classList.remove("search-section");
 };
 
 const showCollection = () => {
@@ -48,18 +48,10 @@ startButton.addEventListener("click", showSearch);
 
 menuWelcome.addEventListener("click", showCollection);
 
-//---- Filtrar data ----//
-// filterData = (data) {
-//     const pokeName = element.name;
-//     const pokeType = element.type
-//   }
-// };
+// //---- Filtrar data ----//
+// const newArrayPokemon = data.filter(pokemon.type[0]);
+// const pickType = document.getElementById("pick-type");
 
-// filter(element => {
-//   return element.name;
+// pickType.addEventListener("change", () => {
+//   console.log("nada");
 // });
-
-// console.log((resultsSearch = filterTypeName.value));
-// innerHTML = filterTypeName.value;
-
-// window.filterData = nameType;
