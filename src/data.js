@@ -7,104 +7,51 @@
 
 // window.example = example;
 
-// for (pokemones in POKEMON.pokemon) {
-//   console.log(POKEMON.pokemon[pokemones].name)
-
-
-//
-const data = POKEMON.pokemon
-// LISTA POKEMON
-let str = "";
-data.forEach(element => {
-  const pokeNumber = element.num;
-  const pokeName = element.name;
-  const pokeType = element.type;
-  const pokeImg = element.img;
-
-  str += `<div class="poke-card">
-  <p id="p-number">${pokeNumber}</p>
-  <h3 id="p-name">${pokeName}</h3>
-  <p id="p-type">${pokeType}</p>
-  <img
-    src="${pokeImg}"
-    alt="Imagen del pokémon"
-    id="p-img"
-  />
-</div>`;
-});
-
-
 //---- Menú hamburguesa ----//
+
 const showMenu = () => {
   principalMenu.classList.toggle("site-nav-open");
 };
-// ordenar pokemones
-const ordenData = (data, propiedad, orden) => {
-  let ordenada;
-  if (orden === "ascendente") {
-    ordenada = data.sort((a, b) => (a[propiedad] > b[propiedad] ? 1 : -1))
-  } else if (orden === "descendente") {
-    ordenada = data.sort((a, b) => (a[propiedad] > b[propiedad] ? -1 : 1))
-  } else if (orden === "numAscendente") {
-    ordenada = data.sort((a, b) => (a[propiedad] > b[propiedad] ? -1 : 1))
-  } else if (orden === "numDescendente") {
-    ordenada = data.sort((a, b) => (a[propiedad] > b[propiedad] ? -1 : 1))
-    return ordenada;
-  }
 
-}
+// const closeMenu = () => {
+//   principalMenu.classList.toggle("site-nav-close");
+// };
 
+//---- Imágen Preload ----//
 
+const containerPreload = document.getElementById("container-charge");
 
+const preloadCharge = () => {
+  containerPreload.style.display = "none";
+};
+window.onload = preloadCharge;
 
+//---- Aparecer y desaparecer secciones ----//
+// const searchSection = document.getElementById("search");
+const welcomeSection = document.getElementById("welcome");
+const startButton = document.getElementById("button-start");
+const collectionSection = document.getElementById("collection-section");
+const menuWelcome = document.getElementById("home-m");
+const menuSearch = document.getElementById("search-m");
+const menuCollection = document.getElementById("collection-m");
 
-
-
-// console.log(strTypes);
-
-
-
-
-
-// filtrar pokemones 
-
-
-
-let filterPoke = data.filter(element => {
-  for (let i = 0; i < element.type.length; i++) {
-    if (element["type"][i] === "Grass") {
-      return true;
-    }
-  }
-})
-
-//  como traer solo los array?
-
-const typelist = (data) => {
-  const arrType = [];
-  let tipos = [];
-  data.forEach(element => {
-    for (let i = 0; i < element.type.length; i++) {
-      arrType.push(element.type[i]);
-    }
-    tipos = [...new Set(arrtype)];
-  });
-  return tipos;
+const showSearch = () => {
+  welcomeSection.classList.add("search-section");
+  collectionSection.classList.remove("search-section");
 };
 
+const showCollection = () => {
+  collectionSection.classList.toggle("show-collection");
+};
 
+startButton.addEventListener("click", showSearch);
 
+menuWelcome.addEventListener("click", showCollection);
 
+// //---- Filtrar data ----//
+// const newArrayPokemon = data.filter(pokemon.type[0]);
+// const pickType = document.getElementById("pick-type");
 
-
-
-
-
-
-
-
-
-
-
-
-
+// pickType.addEventListener("change", () => {
+//   console.log("nada");
+// });

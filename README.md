@@ -24,23 +24,23 @@ La encuesta fue lanzada en grupos de FB dirigidos a jugadores de Pokémon GO, TW
 
 A continuación mostramos los resultados más relevantes:
 
-![Género](./arch_ext/pokemon_encuesta/genero.jpg)
+![Género](./src/arch_ext/pokemon_encuesta/genero.jpg)
 
 Nuestra encuesta fue contestada por un mayor número de mujeres
 
-![Edad](./arch_ext/pokemon_encuesta/edad.jpg)
+![Edad](./src/arch_ext/pokemon_encuesta/edad.jpg)
 
 Nuestro usuario tiene entre 26 - 30 años de edad
 
-![Frecuencia de juego](./arch_ext/pokemon_encuesta/frecuencia.jpg)
+![Frecuencia de juego](./src/arch_ext/pokemon_encuesta/frecuencia.jpg)
 
 Juega diariamente
 
-![Gusto](./arch_ext/pokemon_encuesta/gusto.jpg)
+![Gusto](./src/arch_ext/pokemon_encuesta/gusto.jpg)
 
 Lo que más le gusta de Pokémon GO es que puede armar una colección con los mejore pokemones
 
-![Datos importantes](./arch_ext/pokemon_encuesta/c_import.jpg)
+![Datos importantes](./src/arch_ext/pokemon_encuesta/c_import.jpg)
 
 Le da más importancia a datos como Tipo, Número de caramelos y Debilidades, que a datos como la Altura y Peso y información sobre Eclosión de huevos.
 
@@ -52,7 +52,7 @@ Además les preguntamos a los encuestados para que utilizarían los siguientes d
 
 Gracias a la encuesta realizada pudimos realizar un arquetipo de nuestro usuario.
 
-![Arquetipo](./arch_ext/arquetipo.png)
+![Arquetipo](./src/arch_ext/arquetipo.png)
 
 ## Problemática
 
@@ -64,41 +64,41 @@ El usuario necesita una aplicación que le muestre un listado de sus pokemones p
 
 Éstas son algunas historias de usuario que comenzamos a definir:
 
-![Historias de usuario](./arch_ext/historias-02.png)
+![Historias de usuario](./src/arch_ext/historias-02.png)
 
 ## Proceso de diseño de interfaz
 
 Después de hacer una análisis de aplicación Pokémon GO, llegamos a un acuerdo en que la aplicación web a desarrollar debía ser similar a la aplicación original, ya que el usuario ya esta familiarizado con esa interfaz y le permitira un mejor y más rápido manejo.
 
-![Prototipo de baja fidelaidad](./arch_ext/prototipo_b-04.png)
+![Prototipo de baja fidelaidad](./src/arch_ext/prototipo_b-04.png)
 
-![Prototipo de baja fidelaidad 2](./arch_ext/prototipo_b2-03.png)
+![Prototipo de baja fidelaidad 2](./src/arch_ext/prototipo_b2-03.png)
 
-![Prototipo de alta fidelidad](./arch_ext/prot_alt-05.png)
+![Prototipo de alta fidelidad](./src/arch_ext/prot_alt-05.png)
 
-![](./arch_ext/prot_alt-06.png)
-![](./arch_ext/prot_alt-07.png)
+![](./src/arch_ext/prot_alt-06.png)
+![](./src/arch_ext/prot_alt-07.png)
 
 ### Paleta de color
 
-![Paleta](./arch_ext/elemento-01.png)
+![Paleta](./src/arch_ext/elemento-01.png)
 
 ### Tipografía
 
-![Tipografía](./arch_ext/elemento-02.png)
+![Tipografía](./src/arch_ext/elemento-02.png)
 
 ### Elementos visuales de la aplicación
 
-![E Visuales](./arch_ext/elemento-05.png)
+![E Visuales](./src/arch_ext/elemento-05.png)
 
 ### Marca
 
-![Marca](./arch_ext/elemento-03.png)
-![Elementos](./arch_ext/elemento-04.png)
+![Marca](./src/arch_ext/elemento-03.png)
+![Elementos](./src/arch_ext/elemento-04.png)
 
 ## Planificación del proyecto
 
-![Planificación](./arch_ext/elemento-06.png)
+![Planificación](./src/arch_ext/elemento-06.png)
 
 ## Mejoras a futuro
 
