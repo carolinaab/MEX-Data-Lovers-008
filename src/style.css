@@ -1,8 +1,8 @@
-<<<<<<< HEAD
+
 .prueba{
     background: red
 }
-=======
+
 /* ---- Quitando estilos predetermindos ---- */
 * {
   padding: 0;
@@ -347,9 +347,8 @@ select {
 #p-type {
   font-weight: 500;
 }
-<<<<<<< HEAD
->>>>>>> upstream/master
-=======
+
+
 
 @media screen and (min-width: 768px) {
   .navigation {
@@ -550,4 +549,3 @@ select {
     font-size: 150%;
   }
 }
->>>>>>> c60e2cf3b47ef7efc66d01de7fb450884d8412b0
