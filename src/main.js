@@ -7,6 +7,37 @@ const pickType = document.getElementById("pick-type");
 
 const pickSort = document.getElementById("pick-sort");
 let valueSort = pickSort.value;
+//---- Menú hamburguesa ----//
+
+
+
+//---- Imágen Preload ----//
+
+const containerPreload = document.getElementById("container-charge");
+
+
+//---- Aparecer y desaparecer secciones ----//
+// const searchSection = document.getElementById("search");
+const welcomeSection = document.getElementById("welcome");
+const startButton = document.getElementById("button-start");
+const collectionSection = document.getElementById("collection-section");
+const menuWelcome = document.getElementById("home-m");
+const menuSearch = document.getElementById("search-m");
+const menuCollection = document.getElementById("collection-m");
+
+const showSearch = () => {
+  welcomeSection.classList.add("search-section");
+  collectionSection.classList.remove("search-section");
+};
+
+const showCollection = () => {
+  collectionSection.classList.toggle("show-collection");
+};
+
+startButton.addEventListener("click", showSearch);
+
+menuWelcome.addEventListener("click", showCollection);
+
 
 const manipulateData = data => {
   let str = ""; //Extraer objetos del array que vamos a ocupar
@@ -51,6 +82,9 @@ manipulateData(data);
 const buttonMenu = document.getElementById("icon-menu");
 const principalMenu = document.getElementById("nav");
 // const buttonMenuClose = document.getElementById("icon-menu-close");
+const showMenu = () => {
+  principalMenu.classList.toggle("site-nav-open");
+};
 
 buttonMenu.addEventListener("click", showMenu);
 // buttonMenuClose.addEventListener("click" , closeMenu);
@@ -64,34 +98,22 @@ pickType.addEventListener("change", () => {
 
 //---- Ordenar data ----//
 const sortData = data.sort((a, b) => {
-  //parámetros necesarios en sort (a,b) siempre
-  let aName = a.name.toLowerCase(); // convertir a minúsculas todas las letras
+
+  let aName = a.name.toLowerCase();
   let bName = b.name.toLowerCase();
 
-  if (aName < bName) return -1; //regresa -1 si es falso y 1 si es verdadero
+  if (aName < bName) return -1;
   if (aName > bName) return 1;
   return 0;
 });
 
 
-// ordenar data por numero 
-let newDataNum = data[id];
-console.log(newDataNum);
-
-
-
 pickSort.addEventListener("change", () => {
-  // let valueSort = pickSort.value;  // sacar el valor de la constante con la que fue llamada el id
-  let newArrayZA = sortData; // crear un nuevo arr para guardar el valor y buscar pokemon en el elemento
-  manipulateData(newArrayZA); // nos ayuda a manipular toda la data
+  let newArrayZA = sortData;
+  manipulateData(newArrayZA);
 });
 pickSort.addEventListener("change", () => {
-  let newArrayAZ = sortData.reverse(pokemon => pokemon.name == valueSort); // se usa .reverse para ordenar de z-a
-  manipulateData(newArrayAZ);
+  sortData.reverse();
+
 });
 
-
-pickSort.addEventListener("change", () => {
-  let newDataNum = data.sort(pokemon => pokemon.num[0] == valueSort);
-  manipulateData(newDataNum);
-})
