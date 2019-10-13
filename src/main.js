@@ -117,3 +117,13 @@ pickSort.addEventListener("change", () => {
 
 });
 
+const sortDataNumber = data.sort((a, b) => {
+  let bNumber = b.id
+  let aNumber = a.id
+
+  return aNumber - bNumber
+})
+
+
+
+
