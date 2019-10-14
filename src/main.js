@@ -6,6 +6,9 @@ const showCard = document.getElementById("data"); //Mostrar la data en el div id
 const pickType = document.getElementById("pick-type");
 
 const pickSort = document.getElementById("pick-sort");
+
+const sortNumber = document.getElementById("sort-number");
+
 let valueSort = pickSort.value;
 //---- Menú hamburguesa ----//
 
@@ -17,7 +20,6 @@ const containerPreload = document.getElementById("container-charge");
 
 
 //---- Aparecer y desaparecer secciones ----//
-// const searchSection = document.getElementById("search");
 const welcomeSection = document.getElementById("welcome");
 const startButton = document.getElementById("button-start");
 const collectionSection = document.getElementById("collection-section");
@@ -95,35 +97,25 @@ pickType.addEventListener("change", () => {
   const newArrayPokemon = data.filter(pokemon => pokemon.type[0] == valueType);
   manipulateData(newArrayPokemon);
 });
+// ordenar data evento
 
-//---- Ordenar data ----//
-const sortData = data.sort((a, b) => {
+window.addEventListener('load', function () {
 
-  let aName = a.name.toLowerCase();
-  let bName = b.name.toLowerCase();
+  pickSort.addEventListener("change", (event) => {
+    const selection = event.target.value;
 
-  if (aName < bName) return -1;
-  if (aName > bName) return 1;
-  return 0;
+    if (selection === "az") {
+      let newArrayZA = sortData();
+      manipulateData(newArrayZA);
+    }
+    if (selection === "mayor-menor") {
+      let newArrayZA = sortDataNumber();
+      manipulateData(newArrayZA);
+    } else {
+      manipulateData(sortDataNumber(-1).reverse());
+    }
+
+  });
+
 });
-
-
-pickSort.addEventListener("change", () => {
-  let newArrayZA = sortData;
-  manipulateData(newArrayZA);
-});
-pickSort.addEventListener("change", () => {
-  sortData.reverse();
-
-});
-
-const sortDataNumber = data.sort((a, b) => {
-  let bNumber = b.id
-  let aNumber = a.id
-
-  return aNumber - bNumber
-})
-
-
-
 
